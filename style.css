@@ -1,0 +1,104 @@
+/* Page personnelle — styles.
+   Mardi : typographie, couleurs, espacements (« CSS from scratch »).
+   Jeudi : mise en page mobile first avec Flexbox ou Grid (« Layout Lab »). */
+*{
+   box-sizing: border-box;
+}
+:root{
+   --couleur-texte: #1f2a5a;
+   --couleur-fond: #f4f1ea;
+    --espace-1: 0.5rem;
+   --espace-2: 1rem;
+   --espace-3: 2rem;
+}
+
+body{
+   background-color: white;
+   text-align: left;
+   max-width: 75% ;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+main{
+   background-color: var(--couleur-fond);
+   padding: var(--espace-2);
+}
+
+nav{
+   display: flex;
+   flex-direction: column;
+   padding-top: var(--espace-2);
+   align-items: center;
+   gap: var(--espace-2);   
+}
+
+nav a{
+   text-decoration: none;
+   color: var(--couleur-texte);
+}
+
+a:hover{
+   color: #f4f1ea;
+   background-color: #1f2a5a;
+}
+
+h1{
+   text-align: center;
+   color: var(--couleur-texte);
+   font-weight: 600;
+   padding: var(--espace-1);
+}
+
+h2{
+   color: var(--couleur-texte);
+   font-weight: 200;
+   padding: var(--espace-1);
+}
+
+ul {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: var(--espace-1);
+   border-left: var(--couleur-texte) solid;
+}
+
+ul li{
+   list-style: none;
+}
+
+ol li{
+   padding: var(--espace-2) 0 var(--espace-2) 0;
+}
+
+fieldset {
+    min-width: 0; 
+   }
+
+input {
+   width: 100%;
+   min-width: 0;
+}
+
+button{
+   color: var(--couleur-fond);
+   background-color: var(--couleur-texte);
+   margin: var(--espace-1);
+   padding: 0.3rem;
+   border: none;
+}
+
+@media(min-width : 48rem){
+   nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;  
+  }
+}
+
+@media(min-width : 48rem){
+      ul {
+         display: grid;
+      grid-template-columns: 1fr 1fr 1fr;  
+   }
+}
