@@ -13,24 +13,21 @@
 }
 
 body{
-   background-color: white;
+   background-color: rgb(241, 237, 237);
    text-align: left;
    max-width: 75% ;
    margin-left: auto;
    margin-right: auto;
-}
-
-main{
-   background-color: var(--couleur-fond);
-   padding: var(--espace-2);
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 nav{
    display: flex;
    flex-direction: column;
    padding-top: var(--espace-2);
-   align-items: center;
-   gap: var(--espace-2);   
+   align-items: left;
+   gap: var(--espace-3);  
+   padding-bottom: var(--espace-2); 
 }
 
 nav a{
@@ -44,27 +41,33 @@ a:hover{
 }
 
 h1{
-   text-align: center;
+   text-align: left;
    color: var(--couleur-texte);
    font-weight: 600;
-   padding: var(--espace-1);
+}
+
+.p-border{
+   border-bottom:  solid var(--couleur-texte);
+   padding-bottom: var(--espace-2);
 }
 
 h2{
    color: var(--couleur-texte);
-   font-weight: 200;
+   font-weight: 200 bold;
    padding: var(--espace-1);
+   
 }
 
 ul {
    display: grid;
    grid-template-columns: 1fr;
-   gap: var(--espace-1);
-   border-left: var(--couleur-texte) solid;
+   gap: var(--espace-1) var(--espace-3);
+   
 }
 
-ul li{
-   list-style: none;
+li::marker{
+color: var(--couleur-texte);
+
 }
 
 ol li{
@@ -88,7 +91,7 @@ button{
    border: none;
 }
 
-@media(min-width : 48rem){
+@media(min-width : 30rem){
    nav {
       display: flex;
       flex-direction: row;
@@ -96,7 +99,7 @@ button{
   }
 }
 
-@media(min-width : 48rem){
+@media(min-width : 30rem){
       ul {
          display: grid;
       grid-template-columns: 1fr 1fr 1fr;  
