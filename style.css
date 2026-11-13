@@ -13,7 +13,7 @@
 }
 
 body{
-   background-color: rgb(241, 237, 237);
+   background-color: var(--couleur-fond);
    text-align: left;
    max-width: 75% ;
    margin-left: auto;
@@ -36,8 +36,8 @@ nav a{
 }
 
 a:hover{
-   color: #f4f1ea;
-   background-color: #1f2a5a;
+   color: var(--couleur-fond);
+   background-color: var(--couleur-texte);
 }
 
 h1{
